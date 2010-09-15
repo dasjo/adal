@@ -1,0 +1,3 @@
+<?php
+
+include_once('adal_map.features.inc');

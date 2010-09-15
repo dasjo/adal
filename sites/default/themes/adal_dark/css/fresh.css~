@@ -1,0 +1,104 @@
+/* GENERAL */
+
+a {
+	color: #a22;
+}
+
+a:visited {
+	color: #a22;
+}
+
+a:active, a:hover {
+	color: #f33;
+}
+
+
+/* FRONT PAGE */
+
+.front #content h1 {
+  display: none;
+}
+
+
+/* OPENLAYERS */
+
+.openlayers-popup {
+	color: black;
+}
+
+.openlayers-popup-name {
+	font-weight: bold;
+}
+
+.openlayers-popup ü {
+	margin: 0.2em 0 1em 0;
+}
+
+
+
+/* ADAL MENU */
+
+.adal_menu {
+	height: 45px;
+	padding-bottom: 15px;
+	padding-top: 20px;
+}
+
+.adal_menu .logo {
+  background-image: url('../images/Auslandsdienst-Alumni-Club.gif');
+  height: 45px;
+  width: 356px;
+}
+.adal_menu .logo .text {
+	display: none;
+}
+
+.adal_menu a {
+	display: block;
+	float: left;
+}
+
+.adal_menu .icons {
+	width: 300px; /*257px;*/
+	float: right;
+}
+
+.adal_menu .icon span {
+	display: none;
+}
+
+.adal_menu .info {
+  background-image: url('../images/Info.gif');
+  height: 45px;
+  width: 62px;
+}
+.adal_menu .info:hover {
+  background-image: url('../images/Info-u.gif');
+}
+
+.adal_menu .magazin {
+  background-image: url('../images/Magazin.gif');
+  height: 45px;
+  width: 116px;
+}
+.adal_menu .magazin:hover {
+  background-image: url('../images/Magazin-u.gif');
+}
+
+.adal_menu .facebook {
+  background-image: url('../images/t.gif');
+  height: 45px;
+  width: 41px;
+}
+.adal_menu .facebook:hover {
+  background-image: url('../images/t-u.gif');
+}
+
+.adal_menu .twitter {
+  background-image: url('../images/f.gif');
+  height: 45px;
+  width: 48px;
+}
+.adal_menu .twitter:hover {
+  background-image: url('../images/f-u.gif');
+}
