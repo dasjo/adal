@@ -32,7 +32,8 @@ function adal_base_node_info() {
     'alumni_info' => array(
       'name' => t('Alumni Info'),
       'module' => 'features',
-      'description' => '',
+      'description' => t('Informationen wie Kontaktdaten, Stelle und aktueller Ort eines Alumnus
+Diese Datenblätter werden derzeit separat erstellt könnten später aber mittels dem Drupal Content-Profile Modul direkt mit unseren Alumni/Benutzern verknüpft werden.  '),
       'has_title' => '1',
       'title_label' => t('Title'),
       'has_body' => '1',
@@ -43,7 +44,7 @@ function adal_base_node_info() {
     'place_info' => array(
       'name' => t('Place Info'),
       'module' => 'features',
-      'description' => t('Stellenbeschreibung'),
+      'description' => t('Einfache Stellenbeschreibung, wird auf der karte vor den auslandsdienern bei der jeweiligen stelle angezeigt'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'has_body' => '1',

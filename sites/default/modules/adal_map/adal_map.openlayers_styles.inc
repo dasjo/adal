@@ -12,24 +12,16 @@ function adal_map_openlayers_styles() {
   $openlayers_styles->title = 'Work Place Style';
   $openlayers_styles->description = 'adal work places getting styled';
   $openlayers_styles->data = array(
-    'externalGraphic' => '',
-    'pointRadius' => '5',
-    'fillColor' => '#33FF33',
+    'pointRadius' => 5,
+    'fillColor' => '#FFFFFF',
     'strokeColor' => '#000000',
-    'strokeWidth' => '1',
-    'fillOpacity' => '1',
-    'strokeOpacity' => '1',
+    'strokeWidth' => 3,
+    'fillOpacity' => 1,
+    'strokeOpacity' => 1,
     'strokeLinecap' => 'round',
     'strokeDashstyle' => 'solid',
-    'cursor' => '',
-    'graphicWidth' => '',
-    'graphicHeight' => '',
-    'graphicOpacity' => '1',
-    'graphicXOffset' => '',
-    'graphicYOffset' => '',
-    'graphicName' => '',
-    'rotation' => '',
-    'display' => '',
+    'graphicOpacity' => 1,
+    'labelAlign' => 'cm',
   );
 
   $export['work_place_style'] = $openlayers_styles;

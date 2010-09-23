@@ -11,9 +11,10 @@ function adal_base_content_default_fields() {
     'field_name' => 'field_alumni_contact_address',
     'type_name' => 'alumni_info',
     'display_settings' => array(
+      'weight' => '16',
+      'parent' => 'group_alumni_contact_data',
       'label' => array(
         'format' => 'above',
-        'exclude' => 0,
       ),
       'teaser' => array(
         'format' => 'default',
@@ -61,9 +62,10 @@ function adal_base_content_default_fields() {
     'field_name' => 'field_alumni_contact_email',
     'type_name' => 'alumni_info',
     'display_settings' => array(
+      'weight' => '14',
+      'parent' => 'group_alumni_contact_data',
       'label' => array(
-        'format' => 'above',
-        'exclude' => 0,
+        'format' => 'inline',
       ),
       'teaser' => array(
         'format' => 'default',
@@ -105,9 +107,10 @@ function adal_base_content_default_fields() {
     'field_name' => 'field_alumni_contact_image',
     'type_name' => 'alumni_info',
     'display_settings' => array(
+      'weight' => '13',
+      'parent' => 'group_alumni_contact_data',
       'label' => array(
-        'format' => 'above',
-        'exclude' => 0,
+        'format' => 'hidden',
       ),
       'teaser' => array(
         'format' => 'image_plain',
@@ -147,7 +150,7 @@ function adal_base_content_default_fields() {
       'default_image' => NULL,
       'use_default_image' => 0,
       'label' => 'Portrait',
-      'weight' => '13',
+      'weight' => '-3',
       'description' => '',
       'type' => 'imagefield_widget',
       'module' => 'imagefield',
@@ -159,9 +162,10 @@ function adal_base_content_default_fields() {
     'field_name' => 'field_alumni_contact_misc',
     'type_name' => 'alumni_info',
     'display_settings' => array(
+      'weight' => '17',
+      'parent' => 'group_alumni_contact_data',
       'label' => array(
-        'format' => 'above',
-        'exclude' => 0,
+        'format' => 'hidden',
       ),
       'teaser' => array(
         'format' => 'default',
@@ -209,9 +213,10 @@ function adal_base_content_default_fields() {
     'field_name' => 'field_alumni_contact_tel',
     'type_name' => 'alumni_info',
     'display_settings' => array(
+      'weight' => '15',
+      'parent' => 'group_alumni_contact_data',
       'label' => array(
-        'format' => 'above',
-        'exclude' => 0,
+        'format' => 'inline',
       ),
       'teaser' => array(
         'format' => 'default',
@@ -259,9 +264,10 @@ function adal_base_content_default_fields() {
     'field_name' => 'field_alumni_current_position',
     'type_name' => 'alumni_info',
     'display_settings' => array(
+      'weight' => 0,
+      'parent' => 'group_alumni_current_position',
       'label' => array(
-        'format' => 'above',
-        'exclude' => 0,
+        'format' => 'hidden',
       ),
       'teaser' => array(
         'format' => 'default',
@@ -317,9 +323,10 @@ function adal_base_content_default_fields() {
     'field_name' => 'field_alumni_other_places',
     'type_name' => 'alumni_info',
     'display_settings' => array(
+      'weight' => '2',
+      'parent' => 'group_alumni_other_places',
       'label' => array(
-        'format' => 'above',
-        'exclude' => 0,
+        'format' => 'hidden',
       ),
       'teaser' => array(
         'format' => 'default',
@@ -376,9 +383,10 @@ function adal_base_content_default_fields() {
     'field_name' => 'field_alumni_short_info',
     'type_name' => 'alumni_info',
     'display_settings' => array(
+      'weight' => '18',
+      'parent' => 'group_alumni_contact_data',
       'label' => array(
-        'format' => 'above',
-        'exclude' => 0,
+        'format' => 'hidden',
       ),
       'teaser' => array(
         'format' => 'default',
@@ -427,9 +435,10 @@ weitere kontaktdaten - skype/twitter/etc',
     'field_name' => 'field_alumni_work_place',
     'type_name' => 'alumni_info',
     'display_settings' => array(
+      'weight' => '-3',
+      'parent' => 'group_alumni_work_place',
       'label' => array(
-        'format' => 'above',
-        'exclude' => 0,
+        'format' => 'hidden',
       ),
       'teaser' => array(
         'format' => 'default',
@@ -486,9 +495,10 @@ weitere kontaktdaten - skype/twitter/etc',
     'field_name' => 'field_alumni_work_place_desc',
     'type_name' => 'alumni_info',
     'display_settings' => array(
+      'weight' => '-1',
+      'parent' => 'group_alumni_work_place',
       'label' => array(
-        'format' => 'above',
-        'exclude' => 0,
+        'format' => 'inline',
       ),
       'teaser' => array(
         'format' => 'default',
@@ -537,9 +547,10 @@ weitere kontaktdaten - skype/twitter/etc',
     'field_name' => 'field_alumni_work_year_beg',
     'type_name' => 'alumni_info',
     'display_settings' => array(
+      'weight' => '-2',
+      'parent' => 'group_alumni_work_place',
       'label' => array(
-        'format' => 'above',
-        'exclude' => 0,
+        'format' => 'inline',
       ),
       'teaser' => array(
         'format' => 'default',

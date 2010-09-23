@@ -20,12 +20,12 @@ function adal_map_openlayers_presets() {
     'hide_empty_map' => 0,
     'center' => array(
       'initial' => array(
-        'centerpoint' => '0,0',
+        'centerpoint' => '-1.4062499999439, 20.961439613297',
         'zoom' => '2',
       ),
       'restrict' => array(
         'restrictextent' => 0,
-        'restrictedExtent' => '',
+        'restrictedExtent' => '-19724422.2714,-19998372.580725,19880965.3053,19763558.029875',
       ),
     ),
     'behaviors' => array(
@@ -33,7 +33,6 @@ function adal_map_openlayers_presets() {
       'openlayers_behavior_popup' => array(
         'layers' => array(
           'alumni_map_openlayers_1' => 'alumni_map_openlayers_1',
-          'alumni_map_openlayers_2' => 'alumni_map_openlayers_2',
         ),
       ),
       'openlayers_behavior_keyboarddefaults' => array(),
@@ -47,25 +46,24 @@ function adal_map_openlayers_presets() {
       'openlayers_behavior_cluster' => array(
         'clusterlayer' => array(
           'alumni_map_openlayers_1' => 'alumni_map_openlayers_1',
-          'alumni_map_openlayers_2' => 'alumni_map_openlayers_2',
         ),
         'distance' => '20',
         'threshold' => '',
       ),
     ),
-    'default_layer' => 'google_satellite',
+    'default_layer' => 'google_physical',
     'layers' => array(
-      'google_satellite' => 'google_satellite',
+      'google_physical' => 'google_physical',
       'alumni_map_openlayers_1' => 'alumni_map_openlayers_1',
     ),
-    'layer_styles' => array(),
+    'layer_styles' => array(
+      'alumni_map_openlayers_1' => 'work_place_style',
+    ),
     'layer_activated' => array(
       'alumni_map_openlayers_1' => 'alumni_map_openlayers_1',
-      'alumni_map_openlayers_2' => 'alumni_map_openlayers_2',
     ),
     'layer_switcher' => array(
       'alumni_map_openlayers_1' => 'alumni_map_openlayers_1',
-      'alumni_map_openlayers_2' => 'alumni_map_openlayers_2',
     ),
     'projection' => '900913',
     'displayProjection' => '4326',

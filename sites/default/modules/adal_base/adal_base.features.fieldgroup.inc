@@ -11,14 +11,14 @@ function adal_base_fieldgroup_default_groups() {
     'group_type' => 'standard',
     'type_name' => 'alumni_info',
     'group_name' => 'group_alumni_contact_data',
-    'label' => 'Kontaktdaten',
+    'label' => 'Info',
     'settings' => array(
       'form' => array(
-        'style' => 'fieldset_collapsed',
-        'description' => '',
+        'style' => 'fieldset_collapsible',
+        'description' => 'Interne Kontaktdaten, diese Informationen werden nicht öffentlich sondern nur für andere, angemeldete Alumni angezeigt',
       ),
       'display' => array(
-        'description' => '',
+        'description' => 'Interne Kontaktdaten, diese Informationen werden nicht öffentlich sondern nur für andere, angemeldete Alumni angezeigt',
         'teaser' => array(
           'format' => 'fieldset',
           'exclude' => 0,
@@ -31,17 +31,20 @@ function adal_base_fieldgroup_default_groups() {
           'format' => 'fieldset',
           'exclude' => 0,
         ),
+        'token' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
         'label' => 'above',
       ),
     ),
-    'weight' => '-3',
+    'weight' => '-2',
     'fields' => array(
-      '0' => 'field_alumni_contact_image',
-      '1' => 'field_alumni_contact_email',
-      '2' => 'field_alumni_contact_tel',
-      '3' => 'field_alumni_contact_address',
-      '4' => 'field_alumni_contact_misc',
-      '5' => 'field_alumni_short_info',
+      '0' => 'field_alumni_contact_email',
+      '1' => 'field_alumni_contact_tel',
+      '2' => 'field_alumni_contact_address',
+      '3' => 'field_alumni_contact_misc',
+      '4' => 'field_alumni_short_info',
     ),
   );
 
@@ -57,7 +60,8 @@ function adal_base_fieldgroup_default_groups() {
         'description' => '',
       ),
       'display' => array(
-        'description' => '',
+        'weight' => '-1',
+        'label' => 'above',
         'teaser' => array(
           'format' => 'fieldset',
           'exclude' => 0,
@@ -66,14 +70,14 @@ function adal_base_fieldgroup_default_groups() {
           'format' => 'fieldset',
           'exclude' => 0,
         ),
+        'description' => '',
         '4' => array(
           'format' => 'fieldset',
           'exclude' => 0,
         ),
-        'label' => 'above',
       ),
     ),
-    'weight' => '-1',
+    'weight' => '0',
     'fields' => array(
       '0' => 'field_alumni_current_position',
     ),
@@ -91,7 +95,8 @@ function adal_base_fieldgroup_default_groups() {
         'description' => '',
       ),
       'display' => array(
-        'description' => '',
+        'weight' => '1',
+        'label' => 'above',
         'teaser' => array(
           'format' => 'fieldset',
           'exclude' => 0,
@@ -100,11 +105,11 @@ function adal_base_fieldgroup_default_groups() {
           'format' => 'fieldset',
           'exclude' => 0,
         ),
+        'description' => '',
         '4' => array(
           'format' => 'fieldset',
           'exclude' => 0,
         ),
-        'label' => 'above',
       ),
     ),
     'weight' => '1',
@@ -122,7 +127,7 @@ function adal_base_fieldgroup_default_groups() {
     'settings' => array(
       'form' => array(
         'style' => 'fieldset_collapsible',
-        'description' => '',
+        'description' => 'Am einfachsten wird die Einsatzstelle auf der Weltkarte mittels der Adresssuche unterhalb markiert. Bei geteilten Diensten, also um mehrere Stellen zu markieren muss man das Schreibwerkzeug rechts oben im Kartenbereich verwenden. Bei Problemen hilft vielleicht ein Blick ins "WKT" Feld direkt links unter der Karte, dort werden die Koordinaten gespeichert.',
       ),
       'display' => array(
         'description' => '',
@@ -138,10 +143,14 @@ function adal_base_fieldgroup_default_groups() {
           'format' => 'fieldset',
           'exclude' => 0,
         ),
+        'token' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
         'label' => 'above',
       ),
     ),
-    'weight' => '-2',
+    'weight' => '-1',
     'fields' => array(
       '0' => 'field_alumni_work_place',
       '1' => 'field_alumni_work_year_beg',
@@ -152,7 +161,7 @@ function adal_base_fieldgroup_default_groups() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Aktueller Ort');
-  t('Kontaktdaten');
+  t('Info');
   t('Stelle(n)');
   t('Weitere Orte');
 
