@@ -1,4 +1,13 @@
+
+
+
 <?php
+
+function adal_dark_preprocess_page(&$vars, $hook) {
+  $vars['template_files'][] = 'page-'. str_replace('_', '-', $vars['node']->type);
+}
+
+
 // $Id$
 
 /**

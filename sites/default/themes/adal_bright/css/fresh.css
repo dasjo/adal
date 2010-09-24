@@ -1,0 +1,192 @@
+/* GENERAL */
+
+body {
+	font-family: Arial;
+  font-size: 10pt;
+}
+
+h1, h2, h3 {
+  font-family: Courier New;
+	text-transform: uppercase;
+}
+
+a {
+	color: #a22;
+}
+
+a:visited {
+	color: #a22;
+}
+
+a:active, a:hover {
+	color: #f33;
+}
+
+p {
+  line-height: 140%;
+}
+
+/* FRONT PAGE */
+
+body.front {
+	overflow: hidden;
+}
+
+.front #content h1 {
+  display: none;
+}
+
+/* NEWS */
+
+.page-news .views-row {
+  margin-bottom: 2em;
+}
+ul.links li {
+  padding: 0;
+}
+
+/* POPUPS */
+
+iframe#lightboxFrame {
+  border: none;
+}
+
+.not-front.not-logged-in.lightbox-processed #content {
+  margin-left: 15px;
+	margin-top: 15px;
+  margin-right: -800px;
+  width: 550px;
+}
+
+.not-front.not-logged-in.lightbox-processed .sidebar,
+.not-front.not-logged-in.lightbox-processed .adal_menu {
+  display: none;
+}
+
+#bottomNavClose {
+  margin-top: 5px;
+}
+
+#imageData #bottomNav {
+	height: 40px;
+}
+
+/* OPENLAYERS */
+
+.openlayers-popup {
+	color: black;
+}
+
+.openlayers-popup-name {
+	font-weight: bold;
+}
+
+.openlayers-popup p {
+	margin: 0.2em 0 1em 0;
+}
+
+/* ADMIN */
+.logged-in #main-wrapper {
+	padding: 0 20px;
+}
+
+/* ADAL MENU */
+
+.adal_menu {
+	height: 150px;
+}
+
+.adal_menu li {
+	list-style: none;
+}
+
+.adal_menu .logo {
+  background-image: url('../images/AAC.gif');
+  height: 150px;
+  width: 318px;
+}
+.adal_menu .logo .text {
+	display: none;
+}
+
+.adal_menu a {
+	display: block;
+	float: left;
+}
+
+.adal_menu .icons {
+	width: 377px; /*257px;*/
+	float: right;
+  margin: 0;
+  margin-top: 103px;
+}
+
+.adal_menu .icon span {
+	display: none;
+}
+
+.adal_menu .info {
+  background-image: url('../images/info.gif');
+  height: 47px;
+  width: 62px;
+}
+.adal_menu .info:hover {
+  background-image: url('../images/info-u.gif');
+}
+
+.adal_menu .news {
+  background-image: url('../images/news.gif');
+  height: 47px;
+  width: 62px;
+}
+.adal_menu .news:hover {
+  background-image: url('../images/news-u.gif');
+}
+
+.adal_menu .magazine {
+  background-image: url('../images/magazine.gif');
+  height: 47px;
+  width: 110px;
+}
+.adal_menu .magazine:hover {
+  background-image: url('../images/magazine-u.gif');
+}
+
+.adal_menu .contact {
+  background-image: url('../images/contact.gif');
+  height: 47px;
+  width: 106px;
+}
+.adal_menu .contact:hover {
+  background-image: url('../images/contact-u.gif');
+}
+
+.adal_menu .facebook {
+  background-image: url('../images/f.gif');
+  height: 47px;
+  width: 37px;
+}
+.adal_menu .facebook:hover {
+  background-image: url('../images/f-u.gif');
+}
+
+/* LOGIN */
+
+#block-menu-menu-login { position: absolute; top: 0; right: 0; }
+#block-menu-menu-login li { list-style: none; }
+
+/* flat login block
+#block-user-0 {
+  text-align: center;
+  margin-top: 2em;
+}
+
+#block-user-0 * {
+  display: inline;
+  font-size: 95%;
+}
+
+#block-user-0 .title {
+  display: none;
+}
+*/

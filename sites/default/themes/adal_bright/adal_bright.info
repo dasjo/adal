@@ -2,8 +2,8 @@
 
 
   ; The name and description of the theme used on the admin/build/themes page.
-name        = ADAL dark
-description = ADAL's dark theme
+name        = ADAL
+description = ADAL's theme
 
   ; The screenshot used on the admin/build/themes page.
 screenshot = screenshot.png
@@ -42,12 +42,6 @@ stylesheets[all][]   = css/comments.css
 stylesheets[all][]   = css/forms.css
 stylesheets[all][]   = css/fields.css
 stylesheets[print][] = css/print.css
-
-  ; Add Zen Midnight stylesheets for dark-on-light color scheme
-stylesheets[all][]    = css/zen_midnight.css
-stylesheets[all][]    = css/zen_midnight_views.css
-stylesheets[all][]    = css/zen_midnight_ubercart.css
-
 ; stylesheets[handheld][] = css/mobile.css
 ; stylesheets[only screen and (max-device-width: 480px)][] = css/iphone.css
 

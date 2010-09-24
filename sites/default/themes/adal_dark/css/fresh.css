@@ -1,5 +1,9 @@
 /* GENERAL */
 
+body {
+	font-size: 90%;
+}
+
 a {
 	color: #a22;
 }
@@ -16,6 +20,21 @@ a:active, a:hover {
 /* FRONT PAGE */
 
 .front #content h1 {
+  display: none;
+}
+
+/* POPUPS */
+
+.node-type-page.lightbox-processed #content {
+  margin-left: 15px;
+	margin-top: 15px;
+  margin-right: -800px;
+  width: 800px;
+	font-size: 90%;
+}
+
+.node-type-page.lightbox-processed .sidebar,
+.node-type-page.lightbox-processed .adal_menu {
   display: none;
 }
 
@@ -102,3 +121,25 @@ a:active, a:hover {
 .adal_menu .twitter:hover {
   background-image: url('../images/f-u.gif');
 }
+
+
+/* LOGIN */
+
+#block-menu-menu-login { float: right; }
+#block-menu-menu-login li { list-style: none; }
+
+/* flat login block
+#block-user-0 {
+  text-align: center;
+  margin-top: 2em;
+}
+
+#block-user-0 * {
+  display: inline;
+  font-size: 95%;
+}
+
+#block-user-0 .title {
+  display: none;
+}
+*/

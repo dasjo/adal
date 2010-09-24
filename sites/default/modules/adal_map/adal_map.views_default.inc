@@ -122,7 +122,7 @@ function adal_map_views_default_views() {
       'relationship' => 'none',
     ),
     'field_alumni_work_place_openlayers_wkt_1' => array(
-      'label' => 'Stelle(n)',
+      'label' => 'Weltkarte',
       'alter' => array(
         'alter_text' => 0,
         'text' => '',
@@ -158,6 +158,9 @@ function adal_map_views_default_views() {
       'table' => 'node_data_field_alumni_work_place',
       'field' => 'field_alumni_work_place_openlayers_wkt',
       'relationship' => 'none',
+      'override' => array(
+        'button' => 'Override',
+      ),
     ),
   ));
   $handler->override_option('sorts', array(
@@ -209,6 +212,20 @@ function adal_map_views_default_views() {
     ),
   ));
   $handler = $view->new_display('openlayers', 'Alumni Map Work Place', 'openlayers_1');
+  $handler->override_option('relationships', array(
+    'field_alumni_work_place_refs_nid' => array(
+      'label' => 'Stelle(n)',
+      'required' => 0,
+      'delta' => '-1',
+      'id' => 'field_alumni_work_place_refs_nid',
+      'table' => 'node_data_field_alumni_work_place_refs',
+      'field' => 'field_alumni_work_place_refs_nid',
+      'override' => array(
+        'button' => 'Use default',
+      ),
+      'relationship' => 'none',
+    ),
+  ));
   $handler->override_option('title', 'Alumni Map Work Place');
   $handler->override_option('row_plugin', '');
   $handler->override_option('displays', array());
@@ -233,24 +250,228 @@ function adal_map_views_default_views() {
     'name' => 'navigation',
   ));
   $handler = $view->new_display('openlayers', 'Alumni Map Current Position', 'openlayers_2');
+  $handler->override_option('fields', array(
+    'field_alumni_contact_image_fid' => array(
+      'label' => '',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'link_to_node' => 0,
+      'label_type' => 'none',
+      'format' => 'small_portrait_imagelink',
+      'multiple' => array(
+        'group' => TRUE,
+        'multiple_number' => '',
+        'multiple_from' => '',
+        'multiple_reversed' => FALSE,
+      ),
+      'exclude' => 0,
+      'id' => 'field_alumni_contact_image_fid',
+      'table' => 'node_data_field_alumni_contact_image',
+      'field' => 'field_alumni_contact_image_fid',
+      'override' => array(
+        'button' => 'Override',
+      ),
+      'relationship' => 'none',
+    ),
+    'title' => array(
+      'label' => 'Title',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'link_to_node' => 1,
+      'exclude' => 0,
+      'id' => 'title',
+      'table' => 'node',
+      'field' => 'title',
+      'override' => array(
+        'button' => 'Override',
+      ),
+      'relationship' => 'none',
+    ),
+    'teaser' => array(
+      'label' => 'Teaser',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 1,
+        'max_length' => '300',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'exclude' => 0,
+      'id' => 'teaser',
+      'table' => 'node_revisions',
+      'field' => 'teaser',
+      'relationship' => 'none',
+    ),
+    'field_alumni_work_place_openlayers_wkt_1' => array(
+      'label' => 'Weltkarte',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'link_to_node' => 0,
+      'label_type' => 'widget',
+      'format' => 'openlayers_wkt',
+      'multiple' => array(
+        'group' => TRUE,
+        'multiple_number' => '',
+        'multiple_from' => '',
+        'multiple_reversed' => FALSE,
+      ),
+      'exclude' => 0,
+      'id' => 'field_alumni_work_place_openlayers_wkt_1',
+      'table' => 'node_data_field_alumni_work_place',
+      'field' => 'field_alumni_work_place_openlayers_wkt',
+      'relationship' => 'none',
+      'override' => array(
+        'button' => 'Override',
+      ),
+    ),
+    'field_alumni_other_places_openlayers_wkt' => array(
+      'label' => 'Weitere Orte',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'link_class' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'target' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'html' => 0,
+        'strip_tags' => 0,
+      ),
+      'empty' => '',
+      'hide_empty' => 0,
+      'empty_zero' => 0,
+      'link_to_node' => 0,
+      'label_type' => 'widget',
+      'format' => 'openlayers_wkt',
+      'multiple' => array(
+        'group' => TRUE,
+        'multiple_number' => '',
+        'multiple_from' => '',
+        'multiple_reversed' => FALSE,
+      ),
+      'exclude' => 0,
+      'id' => 'field_alumni_other_places_openlayers_wkt',
+      'table' => 'node_data_field_alumni_other_places',
+      'field' => 'field_alumni_other_places_openlayers_wkt',
+      'override' => array(
+        'button' => 'Use default',
+      ),
+      'relationship' => 'none',
+    ),
+  ));
   $handler->override_option('title', 'Alumni Map Current Position');
+  $handler->override_option('style_options', array(
+    'grouping' => '',
+    'data_source' => array(
+      'value' => 'openlayers_wkt',
+      'other_lat' => 'title',
+      'other_lon' => 'title',
+      'openlayers_wkt' => 'field_alumni_other_places_openlayers_wkt',
+      'other_top' => 'title',
+      'other_right' => 'title',
+      'other_bottom' => 'title',
+      'other_left' => 'title',
+      'name_field' => 'title',
+      'description_field' => 'teaser',
+    ),
+  ));
   $handler->override_option('row_plugin', '');
   $handler->override_option('displays', array());
   $handler = $view->new_display('page', 'Map List', 'page_2');
   $handler->override_option('filters', array(
-    'title' => array(
-      'operator' => 'word',
-      'value' => 'josef, jörg',
+    'status' => array(
+      'operator' => '=',
+      'value' => '1',
       'group' => '0',
       'exposed' => FALSE,
       'expose' => array(
         'operator' => FALSE,
         'label' => '',
       ),
-      'case' => 0,
-      'id' => 'title',
+      'id' => 'status',
       'table' => 'node',
-      'field' => 'title',
+      'field' => 'status',
+      'override' => array(
+        'button' => 'Use default',
+      ),
       'relationship' => 'none',
     ),
   ));
@@ -260,9 +481,11 @@ function adal_map_views_default_views() {
       '2' => 2,
     ),
   ));
-  $handler->override_option('items_per_page', 2);
-  $handler->override_option('style_plugin', 'default');
-  $handler->override_option('style_options', array());
+  $handler->override_option('style_plugin', 'list');
+  $handler->override_option('style_options', array(
+    'grouping' => '',
+    'type' => 'ul',
+  ));
   $handler->override_option('path', 'map-list');
   $handler->override_option('menu', array(
     'type' => 'none',

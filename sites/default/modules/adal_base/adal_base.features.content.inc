@@ -50,7 +50,7 @@ function adal_base_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Adresse',
-      'weight' => '16',
+      'weight' => '17',
       'description' => '',
       'type' => 'text_textarea',
       'module' => 'text',
@@ -95,7 +95,7 @@ function adal_base_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Email',
-      'weight' => '14',
+      'weight' => '18',
       'description' => '',
       'type' => 'email_textfield',
       'module' => 'email',
@@ -201,7 +201,7 @@ function adal_base_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Weiteres (Hompage, etc)',
-      'weight' => '17',
+      'weight' => '20',
       'description' => '',
       'type' => 'text_textarea',
       'module' => 'text',
@@ -252,7 +252,7 @@ function adal_base_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Telefon',
-      'weight' => '15',
+      'weight' => '19',
       'description' => '',
       'type' => 'text_textfield',
       'module' => 'text',
@@ -311,7 +311,7 @@ function adal_base_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Aktueller Ort',
-      'weight' => 0,
+      'weight' => '16',
       'description' => '',
       'type' => 'openlayers_geocoder_widget',
       'module' => 'openlayers_geocoder',
@@ -422,7 +422,7 @@ function adal_base_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Private Kurzinfo',
-      'weight' => '18',
+      'weight' => '21',
       'description' => 'studium/profession/arbeit/sonstiges
 weitere kontaktdaten - skype/twitter/etc',
       'type' => 'text_textarea',
@@ -430,15 +430,14 @@ weitere kontaktdaten - skype/twitter/etc',
     ),
   );
 
-  // Exported field: field_alumni_work_place
-  $fields['alumni_info-field_alumni_work_place'] = array(
-    'field_name' => 'field_alumni_work_place',
+  // Exported field: field_alumni_work_place_refs
+  $fields['alumni_info-field_alumni_work_place_refs'] = array(
+    'field_name' => 'field_alumni_work_place_refs',
     'type_name' => 'alumni_info',
     'display_settings' => array(
-      'weight' => '-3',
-      'parent' => 'group_alumni_work_place',
       'label' => array(
-        'format' => 'hidden',
+        'format' => 'above',
+        'exclude' => 0,
       ),
       'teaser' => array(
         'format' => 'default',
@@ -452,93 +451,40 @@ weitere kontaktdaten - skype/twitter/etc',
         'format' => 'default',
         'exclude' => 0,
       ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
     ),
     'widget_active' => '1',
-    'type' => 'openlayers_wkt',
+    'type' => 'nodereference',
     'required' => '0',
-    'multiple' => '0',
-    'module' => 'openlayers_cck',
+    'multiple' => '2',
+    'module' => 'nodereference',
     'active' => '1',
-    'openlayers_cck_feature_types' => array(
-      'point' => 'point',
-      'path' => 0,
-      'polygon' => 0,
+    'referenceable_types' => array(
+      'place_info' => 'place_info',
+      'alumni_info' => 0,
+      'page' => 0,
+      'story' => 0,
     ),
+    'advanced_view' => '--',
+    'advanced_view_args' => '',
     'widget' => array(
-      'openlayers_cck_preset_map' => 'default',
-      'openlayers_behaviors' => array(
-        'openlayers_behavior_zoomtolayer' => array(
-          'enabled' => 0,
-          'options' => array(
-            'zoomtolayer' => 'openlayers_cck_vector_layer',
-            'point_zoom_level' => '5',
-          ),
-        ),
-      ),
-      'keep_points' => 0,
+      'autocomplete_match' => 'contains',
+      'size' => '60',
       'default_value' => array(
         '0' => array(
-          'openlayers_wkt' => '',
+          'nid' => NULL,
+          '_error_element' => 'default_value_widget][field_alumni_work_place_refs][0][nid][nid',
         ),
       ),
       'default_value_php' => NULL,
       'label' => 'Stelle(n)',
-      'weight' => '-3',
-      'description' => 'dieses feld speichert die koordinaten. bitte einfach darunter nach der addresse suchen',
-      'type' => 'openlayers_geocoder_widget',
-      'module' => 'openlayers_geocoder',
-    ),
-  );
-
-  // Exported field: field_alumni_work_place_desc
-  $fields['alumni_info-field_alumni_work_place_desc'] = array(
-    'field_name' => 'field_alumni_work_place_desc',
-    'type_name' => 'alumni_info',
-    'display_settings' => array(
-      'weight' => '-1',
-      'parent' => 'group_alumni_work_place',
-      'label' => array(
-        'format' => 'inline',
-      ),
-      'teaser' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      'full' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-      '4' => array(
-        'format' => 'default',
-        'exclude' => 0,
-      ),
-    ),
-    'widget_active' => '1',
-    'type' => 'text',
-    'required' => '0',
-    'multiple' => '0',
-    'module' => 'text',
-    'active' => '1',
-    'text_processing' => '0',
-    'max_length' => '',
-    'allowed_values' => '',
-    'allowed_values_php' => '',
-    'widget' => array(
-      'rows' => '5',
-      'size' => 60,
-      'default_value' => array(
-        '0' => array(
-          'value' => '',
-          '_error_element' => 'default_value_widget][field_alumni_work_place_desc][0][value',
-        ),
-      ),
-      'default_value_php' => NULL,
-      'label' => 'Einsatzstelle',
-      'weight' => '-1',
-      'description' => 'einsatzstelle(Institution, Ort, Land - zB Casa de los Tres Mundos, Granada, Nicaragua)
-2te einsatzstelle optional',
-      'type' => 'text_textarea',
-      'module' => 'text',
+      'weight' => '22',
+      'description' => 'Die eine bzw. die beiden Auslandsdienststellen werden hier per Referenz angegeben. Während des Eintippens vervollständigt sich der Name von selbst. Fehlende Stellen können bzw. müssen separat <a href="/node/add/place-info">erstellt</a> werden.',
+      'type' => 'nodereference_autocomplete',
+      'module' => 'nodereference',
     ),
   );
 
@@ -592,7 +538,7 @@ weitere kontaktdaten - skype/twitter/etc',
       'year_range' => '-15:+1',
       'label_position' => 'above',
       'label' => 'Jahr des Antritts',
-      'weight' => '-2',
+      'weight' => '21',
       'description' => '',
       'type' => 'date_select',
       'module' => 'date',
@@ -633,7 +579,7 @@ weitere kontaktdaten - skype/twitter/etc',
       'polygon' => 0,
     ),
     'widget' => array(
-      'openlayers_cck_preset_map' => 'default',
+      'openlayers_cck_preset_map' => 'alumni_map_preset',
       'openlayers_behaviors' => array(
         'openlayers_behavior_zoomtolayer' => array(
           'enabled' => 0,
@@ -650,8 +596,8 @@ weitere kontaktdaten - skype/twitter/etc',
         ),
       ),
       'default_value_php' => NULL,
-      'label' => 'Stelle(n)',
-      'weight' => '-4',
+      'label' => 'Weltkarte',
+      'weight' => '-3',
       'description' => 'dieses feld speichert die koordinaten. bitte einfach darunter nach der addresse suchen',
       'type' => 'openlayers_geocoder_widget',
       'module' => 'openlayers_geocoder',
@@ -662,7 +608,6 @@ weitere kontaktdaten - skype/twitter/etc',
   // Included for use with string extractors like potx.
   t('Adresse');
   t('Aktueller Ort');
-  t('Einsatzstelle');
   t('Email');
   t('Jahr des Antritts');
   t('Portrait');
@@ -671,6 +616,7 @@ weitere kontaktdaten - skype/twitter/etc',
   t('Telefon');
   t('Weitere Orte');
   t('Weiteres (Hompage, etc)');
+  t('Weltkarte');
 
   return $fields;
 }

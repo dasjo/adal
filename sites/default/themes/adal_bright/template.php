@@ -1,4 +1,9 @@
 <?php
+
+function adal_dark_preprocess_page(&$vars, $hook) {
+  $vars['template_files'][] = 'page-'. str_replace('_', '-', $vars['node']->type);
+}
+
 // $Id$
 
 /**
@@ -21,13 +26,13 @@
  *   this, we have to override the theme function. You have to first find the
  *   theme function that generates the output, and then "catch" it and modify it
  *   here. The easiest way to do it is to copy the original function in its
- *   entirety and paste it here, changing the prefix from theme_ to adal_dark_.
+ *   entirety and paste it here, changing the prefix from theme_ to adal_bright_.
  *   For example:
  *
  *     original: theme_breadcrumb()
- *     theme override: adal_dark_breadcrumb()
+ *     theme override: adal_bright_breadcrumb()
  *
- *   where adal_dark is the name of your sub-theme. For example, the
+ *   where adal_bright is the name of your sub-theme. For example, the
  *   zen_classic theme would define a zen_classic_breadcrumb() function.
  *
  *   If you would like to override any of the theme functions used in Zen core,
@@ -62,24 +67,11 @@
  *   and http://drupal.org/node/190815#template-suggestions
  */
 
-function adal_dark_views_view_field__alumni_map__body($view, $field, $row) {
-
-  // Reference safe for PHP 4:
-  $orig = $view->field[$field->options['id']]->advanced_render($row);
-
-	//add picture
-  //$pic = $view->field['field_alumni_contact_image_fid']->advanced_render($row);
-
-	$total = $pic . $orig;
-	//dsm($total);
-	return $total;
-}
-
 
 /**
  * Implementation of HOOK_theme().
  */
-function adal_dark_theme(&$existing, $type, $theme, $path) {
+function adal_bright_theme(&$existing, $type, $theme, $path) {
   $hooks = zen_theme($existing, $type, $theme, $path);
   // Add your theme hooks like this:
   /*
@@ -98,7 +90,7 @@ function adal_dark_theme(&$existing, $type, $theme, $path) {
  *   The name of the template being rendered (name of the .tpl.php file.)
  */
 /* -- Delete this line if you want to use this function
-function adal_dark_preprocess(&$vars, $hook) {
+function adal_bright_preprocess(&$vars, $hook) {
   $vars['sample_variable'] = t('Lorem ipsum.');
 }
 // */
@@ -112,7 +104,7 @@ function adal_dark_preprocess(&$vars, $hook) {
  *   The name of the template being rendered ("page" in this case.)
  */
 /* -- Delete this line if you want to use this function
-function adal_dark_preprocess_page(&$vars, $hook) {
+function adal_bright_preprocess_page(&$vars, $hook) {
   $vars['sample_variable'] = t('Lorem ipsum.');
 }
 // */
@@ -126,11 +118,11 @@ function adal_dark_preprocess_page(&$vars, $hook) {
  *   The name of the template being rendered ("node" in this case.)
  */
 /* -- Delete this line if you want to use this function
-function adal_dark_preprocess_node(&$vars, $hook) {
+function adal_bright_preprocess_node(&$vars, $hook) {
   $vars['sample_variable'] = t('Lorem ipsum.');
 
   // Optionally, run node-type-specific preprocess functions, like
-  // adal_dark_preprocess_node_page() or adal_dark_preprocess_node_story().
+  // adal_bright_preprocess_node_page() or adal_bright_preprocess_node_story().
   $function = __FUNCTION__ . '_' . $vars['node']->type;
   if (function_exists($function)) {
     $function($vars, $hook);
@@ -147,7 +139,7 @@ function adal_dark_preprocess_node(&$vars, $hook) {
  *   The name of the template being rendered ("comment" in this case.)
  */
 /* -- Delete this line if you want to use this function
-function adal_dark_preprocess_comment(&$vars, $hook) {
+function adal_bright_preprocess_comment(&$vars, $hook) {
   $vars['sample_variable'] = t('Lorem ipsum.');
 }
 // */
@@ -161,7 +153,7 @@ function adal_dark_preprocess_comment(&$vars, $hook) {
  *   The name of the template being rendered ("block" in this case.)
  */
 /* -- Delete this line if you want to use this function
-function adal_dark_preprocess_block(&$vars, $hook) {
+function adal_bright_preprocess_block(&$vars, $hook) {
   $vars['sample_variable'] = t('Lorem ipsum.');
 }
 // */

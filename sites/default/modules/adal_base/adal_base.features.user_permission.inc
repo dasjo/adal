@@ -78,14 +78,6 @@ function adal_base_user_default_permissions() {
     ),
   );
 
-  // Exported permission: edit field_alumni_work_place_desc
-  $permissions['edit field_alumni_work_place_desc'] = array(
-    'name' => 'edit field_alumni_work_place_desc',
-    'roles' => array(
-      '0' => 'authenticated user',
-    ),
-  );
-
   // Exported permission: edit field_alumni_work_year_beg
   $permissions['edit field_alumni_work_year_beg'] = array(
     'name' => 'edit field_alumni_work_year_beg',
@@ -162,15 +154,6 @@ function adal_base_user_default_permissions() {
   // Exported permission: view field_alumni_work_place
   $permissions['view field_alumni_work_place'] = array(
     'name' => 'view field_alumni_work_place',
-    'roles' => array(
-      '0' => 'anonymous user',
-      '1' => 'authenticated user',
-    ),
-  );
-
-  // Exported permission: view field_alumni_work_place_desc
-  $permissions['view field_alumni_work_place_desc'] = array(
-    'name' => 'view field_alumni_work_place_desc',
     'roles' => array(
       '0' => 'anonymous user',
       '1' => 'authenticated user',
