@@ -1,0 +1,44 @@
+tech:
+
+modules/openlaysers/includes/behaviors/js/openlayers_behavior_cluster.js
+>> custom Drupal.theme.openlayersPopup2
+>> rewrite rel=lightbox requiring view:alumni_list
+
+view:alumni_list on start page (hidden)
+themes/adal_bright/views-view-fields--alumni_list.tpl.php
+>> rewrite rel=lightbox...
+
+
+
+
+rechts oben:
+login
+(stammdaten bearbeiten)
+(orte eintragen)
+
+unten:
+Auslandsdienst Alumni Club (logo) 
+About (popup - text)
+Magazin (popup - text)
+facebook (external link)
+twitter (external link)
+Anmeldung
+
+
+
+
+stammdaten:
+
+vorname + nachname
+
+einsatzstelle(Institution, Ort, Land - zB Casa de los Tres Mundos, Granada, Nicaragua)
+2te einsatzstelle optional
+jahr des antritts (zB 2004)
+
+kontakt (wird nur intern angezeigt)
+email (einzeilig)
+telefon (einzeilig)
+adresse (mehrzeilig)
+homepage, weiteres (mehrzeilig)
+
+kurzinfo (mehrzeilig, optional, studium/profession/arbeit/sonstiges)

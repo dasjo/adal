@@ -1,0 +1,36 @@
+ftp://alumni@alumni.auslandsdienst.at/
+1F+_@{s
+
+
+
+
+db-host: db129.kundenserver.de
+db-name: db341776222
+db-user: dbo341776222
+
+
+api keys
+
+google maps
+ABQIAAAA6g1TuSbk_1aKvMIyOCn1lBRt_FPe8tcg6RJU29wF1HcEvzc83BTFX3TNvsnMLYOH-6nOuDKNZWAB8A
+
+yahoo
+dcgGj8vV34HUu3RnvzHDlCv.4i3vX1r8SXtTHDemLwH9A71dphS54fEeU.8OfU8-
+
+bing
+AmHXb0I6ldFrP1k5bvWSFNesClESHUFtBTT9blUGlTUMfJDE7hthZHH6vzvc4q23
+
+
+
+
+my problem is that combining two related content types on a single map doesn't work for me.
+
+i have two content types:
+- place includes the geoposition
+- alumni(person) refers to a place via nodereference
+
+i am trying to display both places and persons related to those places by nodereference on a single map. the problem with the noderef is, that i need two displays: one to list place->geoposition and the other for person->place->geoposition
+
+now what happens is: only the first of my displays works.
+
+i have a working example without the noderef implementation on http://alumni.auslandsdienst.at/

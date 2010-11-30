@@ -157,3 +157,13 @@ function adal_bright_preprocess_block(&$vars, $hook) {
   $vars['sample_variable'] = t('Lorem ipsum.');
 }
 // */
+
+/*
+function adal_bright_preprocess_views_view_fields(&$vars) {
+  $view = $vars['view'];
+  dpm($vars);
+  if($view->name == 'alumni_list') {
+    $vars['fields']['title']->ref = "lightframe[a|width:980px;height:500px][]";
+  }
+}
+*/

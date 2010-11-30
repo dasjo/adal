@@ -20,3 +20,6 @@ projects[] = devel_themer
 ;projects[] = fbconnect
 ;projects[] = webform
 
+
+;http://drupal.org/files/issues/zen-634552_0.patch
+;https://drupal.org/node/634552#comment-3244662

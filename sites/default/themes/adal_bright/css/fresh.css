@@ -28,7 +28,7 @@ p {
 
 /* FRONT PAGE */
 
-body.front {
+body.front, body.page-current {
 	overflow: hidden;
 }
 
@@ -43,46 +43,6 @@ body.front {
 }
 ul.links li {
   padding: 0;
-}
-
-/* POPUPS */
-
-iframe#lightboxFrame {
-  border: none;
-}
-
-.not-front.not-logged-in.lightbox-processed #content {
-  margin-left: 15px;
-	margin-top: 15px;
-  margin-right: -800px;
-  width: 550px;
-}
-
-.not-front.not-logged-in.lightbox-processed .sidebar,
-.not-front.not-logged-in.lightbox-processed .adal_menu {
-  display: none;
-}
-
-#bottomNavClose {
-  margin-top: 5px;
-}
-
-#imageData #bottomNav {
-	height: 40px;
-}
-
-/* OPENLAYERS */
-
-.openlayers-popup {
-	color: black;
-}
-
-.openlayers-popup-name {
-	font-weight: bold;
-}
-
-.openlayers-popup p {
-	margin: 0.2em 0 1em 0;
 }
 
 /* ADMIN */
@@ -172,8 +132,16 @@ iframe#lightboxFrame {
 
 /* LOGIN */
 
-#block-menu-menu-login { position: absolute; top: 0; right: 0; }
 #block-menu-menu-login li { list-style: none; }
+#block-menu-menu-login { position: absolute; top: 5px; right: 0; }
+
+/* USER LINKS */
+
+#block-menu-primary-links {
+	position: absolute; right: 20px;
+}
+
+#block-menu-primary-links li { list-style: none; }
 
 /* flat login block
 #block-user-0 {
@@ -190,3 +158,104 @@ iframe#lightboxFrame {
   display: none;
 }
 */
+
+/* ALUMNI LIST */
+
+#block-views-alumni_list-block_2 {
+	display: none;
+}
+
+/* ALUMNI MAP OPENLAYERS */
+
+.openlayers-popup {
+  color: black;
+}
+
+.openlayers-popup-name {
+  font-weight: bold;
+}
+
+.openlayers-popup p {
+  margin: 0.2em 0 1em 0;
+}
+
+.openlayers-popup-image {
+  float: left;
+  margin-right: 10px;
+}
+
+/* LISTINGS */
+
+.node-teaser {
+  margin-bottom: 2em;
+}
+
+.view-alumni-list .views-field-field-alumni-contact-image-fid {
+  float: left;
+  margin-right: 10px;
+}
+
+.view-alumni-list .views-row, .openlayers-popup-feature {
+  clear: left;
+}
+
+/* POPUPS */
+
+.node.node-type-alumni-info fieldset {
+  border: none;
+  padding: 0;
+}
+
+.node.node-type-alumni-info .field-field-alumni-work-place-refs,
+#block-views-alumni_list-block_1 {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 350px;
+  display: block;	
+}
+
+.node .group-place-info legend, .field-type-openlayers-wkt .field-label {
+	display: none;
+}
+
+.node .group-alumni-contact-data legend, .group-alumni-contact-data .description {
+	
+}
+
+iframe#lightboxFrame {
+  border: none;
+}
+
+.lightbox2-alt-layout-data #bottomNavClose, .lightbox2-alt-layout #bottomNavClose {
+	margin-top: 0;
+}
+
+.lightbox2-alt-layout #imageData #bottomNav, .lightbox2-alt-layout-data #bottomNav {
+	margin-bottom: 0;
+}
+
+.not-front.not-logged-in.lightbox-processed #content {
+  margin-left: 15px;
+  margin-top: 15px;
+  margin-right: -800px;
+  width: 550px;
+}
+
+.not-front.not-logged-in.lightbox-processed .sidebar,
+.not-front.not-logged-in.lightbox-processed .adal_menu {
+  display: none;
+}
+
+#bottomNavClose {
+  margin-top: 5px;
+}
+
+#imageData #bottomNav {
+  height: 40px;
+}
+
+
+.view-alumni-list .views-row, .view-alumni-list h3 {
+	clear: both;
+}
