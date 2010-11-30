@@ -1,0 +1,18 @@
+<?php
+
+function adal_custom_openlayers_behaviors() {
+      return array(
+        'openlayers_behavior_mybehavior' => array(
+          'title' => t('ADAL Popup'),
+          'description' => t('Does popups for ADAL site'),
+          'type' => 'layer',
+          'path' => drupal_get_path('module', 'adal_custom')
+            .'/includes/behaviors',
+          'file' => 'openlayers_behavior_adal_popup.inc',
+          'behavior' => array(
+            'class' => 'openlayers_behavior_adal_popup',
+            'parent' => 'openlayers_behavior',
+          ),
+        ),
+      );
+    }
