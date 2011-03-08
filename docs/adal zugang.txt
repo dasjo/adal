@@ -1,7 +1,12 @@
 ftp://alumni@alumni.auslandsdienst.at/
 1F+_@{s
 
+alumni@auslandsdienst.at
+amu2vew3
 
+IMAP-Server (Posteingang)	imap.1und1.de
+POP-Server (Posteingang)	pop.1und1.de
+SMTP-Server (Postausgang)	smtp.1und1.de
 
 
 db-host: db129.kundenserver.de
